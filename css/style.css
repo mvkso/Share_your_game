@@ -71,11 +71,11 @@ input {
     .login-container, .logo {
         width: 100%;
     }
-    form {
+    .login{
         
         margin: auto;
     }
-    img {
+    .logo>img {
         height: 7em;
         margin: 2em;
     }
@@ -160,19 +160,21 @@ header {
     padding:15px;
 }
 header >img {
-    width: 10%;
-    height: 100%;
+    width: 8%;
+    height: 170%;
     margin: 1em;
     align-items: flex-start;
     top: 200px;
+    
 }
 
 header > form >input{
     text-align: center;
+     
 }
 
 body{
-    background-color: purple;
+    background-color:lightpink;
     background-attachment: fixed;
 }
 
@@ -184,3 +186,48 @@ body{
 
 
 
+
+@media only screen and (max-device-width: 420px) {
+    nav{
+        width: 100vw;
+        height: 20vw;
+        position: fixed;
+    }
+  
+
+    header>img{
+        margin: -10px;
+        width: 170px;
+        height: 200px;
+    }
+
+    
+    button.projects{
+        width: 150px;
+        height: 60%;
+        align-items: center;
+        text-align: center;
+        text-overflow: ellipsis;
+        font-size: 25px;
+        text-align: center;
+    }
+
+    button.current_projects{
+        width: 150px;
+        height: 60%;
+        align-items: center;
+        text-align: center;
+        text-overflow: ellipsis;
+        font-size: 25px;
+        text-align: center;
+    }
+    header>form>input{
+        width: 0px;
+        height: 0px;
+        visibility: hidden;
+        display: none;
+        
+    }
+    
+    
+}
