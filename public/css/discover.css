@@ -31,11 +31,12 @@ main>.search{
     text-align: center;
     line-height: 2.5em;
 
-
-
-
 }
 
+button{
+    background: rgb(223, 142, 38,0.5) ;
+    border: 2px solid black;
+}
 
 @media only screen and (max-device-width: 420px) {
     main{
