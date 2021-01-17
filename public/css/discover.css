@@ -26,17 +26,17 @@ main>.search{
     width: 1100px;
     height: 40px;
     background: rgb(223, 142, 38,0.5) ;
-    border: 2px solid pink;
+    border: 2px solid black;
     border-radius: 1em;
     text-align: center;
     line-height: 2.5em;
 
-
-
-
 }
 
-
+button{
+    background: rgb(223, 142, 38,0.5) ;
+    border: 2px solid black;
+}
 
 @media only screen and (max-device-width: 420px) {
     main{

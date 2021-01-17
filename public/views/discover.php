@@ -34,9 +34,9 @@
                         FILTERS
                         
                         </div>
-                    <div class="add_project">
+                    <button class="add_project">
                         + ADD PROJECT
-                    </div>
+                    </button>
                 </div>
 
            </section>
