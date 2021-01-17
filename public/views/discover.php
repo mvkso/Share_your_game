@@ -29,11 +29,11 @@
                 <input placeholder="SEARCH">
                 <div>
                     
-                    <div class="social-section">
-                        <i class="fas fa-angle-double-down"></i>
-                        FILTERS
-                        
-                        </div>
+<!--                    <div class="social-section">-->
+<!--                        <i class="fas fa-angle-double-down"></i>-->
+<!--                        FILTERS-->
+<!--                        -->
+<!--                        </div>-->
                     <button class="add_project">
                         + ADD PROJECT
                     </button>
