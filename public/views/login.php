@@ -10,11 +10,20 @@
             <img src="public/img/logo.png">
         </div>
         <div class="login-container">
-            <form class="login">
+            <form class="login" action="login" method="POST">
+                <div class="messages">
+                    <?php if(isset($messages)){
+                        foreach ($messages as $message) {
+                            echo $messages;
+                        }
+
+                    }
+                    ?>
+                </div>
                 <input name="email" type="text" placeholder="email@email.com">
                 <input name="password" type="password" placeholder="password">
                 <button>LOGIN</button>
-                <button>SIGN UP</button>
+                <button type="submit">SIGN UP</button>
             </form>
         </div>
     </div>

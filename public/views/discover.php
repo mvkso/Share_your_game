@@ -1,8 +1,8 @@
 
 <!DOCTYPE html>
 <head>
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
-    <link rel="stylesheet" type="text/css" href="../css/discover.css">
+    <link rel="stylesheet" type="text/css" href="public/css/style.css">
+    <link rel="stylesheet" type="text/css" href="public/css/discover.css">
     <script src="https://kit.fontawesome.com/723297a893.js" crossorigin="anonymous"></script>
     <title>DISCOVER</title>
 
@@ -34,6 +34,9 @@
                         FILTERS
                         
                         </div>
+                    <div class="add_project">
+                        + ADD PROJECT
+                    </div>
                 </div>
 
            </section>
