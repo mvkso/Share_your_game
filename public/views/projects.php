@@ -13,10 +13,10 @@
             <header>
                
                     <img src="public/img/logo1.png">
-                    <button class="current_projects">HOME</button>
-                    <button class="projects">CONTACTS</button>
-                    <button class="projects">DISCOVER</button>
-                    <button class="projects">ACCOUNT</button>
+                <button class="current_projects"><a href="projects" style="text-decoration: none">HOME</a></button>
+                <button class="projects"><a href="contacts" style="text-decoration: none">CONTACTS</a></button>
+                <button class="projects"><a href="discover" style="text-decoration: none">DISCOVER</a></button>
+                <button class="projects"><a href="account" style="text-decoration: none">ACCOUNT</a></button>
                     <form>
                         <input placeholder="search">
                     </form>
