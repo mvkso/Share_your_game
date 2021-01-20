@@ -13,4 +13,5 @@ Routing::get('discover','DefaultController');
 Routing::get('account','DefaultController');
 Routing::get('contacts','DefaultController');
 Routing::post('login','SecurityController');
+Routing::post('addProject','DiscoverController');
 Routing::run($path);

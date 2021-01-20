@@ -13,10 +13,10 @@
             <header>
                
                     <img src="public/img/logo1.png">
-                    <button class="current_projects">HOME</button>
-                    <button class="projects">CONTACTS</button>
-                    <button class="projects">DISCOVER</button>
-                    <button class="projects">ACCOUNT</button>
+                <button class="current_projects"><a href="projects" style="text-decoration: none">HOME</a></button>
+                <button class="projects"><a href="contacts" style="text-decoration: none">CONTACTS</a></button>
+                <button class="projects"><a href="discover" style="text-decoration: none">DISCOVER</a></button>
+                <button class="projects"><a href="account" style="text-decoration: none">ACCOUNT</a></button>
                     <form>
                         <input placeholder="search">
                     </form>
@@ -38,10 +38,10 @@
                     </div>
                 </div>
                 <div id="project 2">
-                    <img src="public/img/uploads/malediwy.png" width="400" height="230">
+                    <img src="public/uploads/<?= $project->getImage()?>" width="400" height="230">
                         <div>
-                    <h2>Title</h2>
-                    <p>description</p>
+                    <h2><?= $project->getTitle() ?></h2>
+                    <p><?= $project->getDescription() ?></p>
                     <div class="social-section">
                         <i class="fas fa-heart">600</i>
                         <i class="fas fa-minus-square">101</i>
