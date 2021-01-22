@@ -1,9 +1,24 @@
 
 main{
-    grid-gap: 5em;
-    padding: 5em;
+    grid-gap: 7em;
+    padding: 6em;
     display:flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
+
+}
+button{
+    margin-top: 3em;
+    width: 250px;
+    height: 50px;
+    background: rgb(223, 142, 38,0.5);
+    border: 2px solid black;
+    text-decoration-color: black;
+}
+.id{
+    margin-top: -7em;
+    display: flex;
+    flex-direction: row;;
 }
 
 .details{
@@ -77,15 +92,26 @@ main{
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding: 3em;
         
     }
+    button{
+        width: 40vw;
+        height: 20vw;
+    }
     
-    
+    .id{
+        padding: 2em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
     .details{
     
         /* overflow: auto; */
-        grid-gap: 0em;
-        padding: 2em;
+
+        padding: 1em;
         /* overflow-x: hidden;
         overflow-y: auto;  */
         overflow:auto;
@@ -110,8 +136,8 @@ main{
        
     }
     .aboutme{
-        margin: -400px;
-        padding: 5em;
+
+        margin-top: -2em;
         /* position: fixed; */
     
         /* overflow: auto; */

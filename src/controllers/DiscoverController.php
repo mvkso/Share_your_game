@@ -1,6 +1,7 @@
 <?php
 require_once 'AppController.php';
 require_once __DIR__.'/../models/Project.php';
+require_once __DIR__.'/../repository/ProjectRepository.php';
 
 class DiscoverController extends AppController
 {
@@ -8,7 +9,19 @@ class DiscoverController extends AppController
     const SUPPORTED_TYPES = ['image/png','image/jpeg'];
     const UPLOAD_DIRECTORY = '/../public/uploads/';
 
+    private $projectRepository;
     private $message = [];
+
+    /**
+     * DiscoverController constructor.
+     */
+    public function __construct()
+    {
+        parent::__construct();
+        $this->projectRepository = new ProjectRepository();
+    }
+
+
     public function addProject()
     {
         if ($this->isPost() && is_uploaded_file($_FILES['file']['tmp_name']) && $this->validate($_FILES['file'])) {
@@ -18,6 +31,7 @@ class DiscoverController extends AppController
             );
 
             $project = new Project($_POST['title'], $_POST['description'], $_FILES['file']['name']);
+            $this->projectRepository->addProject($project);
 
 
             return $this->render('discover',['messages'=>$this->message, 'project'=> $project]);

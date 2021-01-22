@@ -28,5 +28,8 @@ class DefaultController extends AppController{
         $this->render('contacts');
 
     }
+    public function yourProjects(){
+        $this->render('your_projects');
+    }
     
 }

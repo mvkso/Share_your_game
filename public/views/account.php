@@ -25,6 +25,11 @@
             </header>
         </nav>
         <main>
+            <button class="your_project"><a href="yourProjects" style="text-decoration: none">
+                    YOUR PROJECTS
+                </a>
+            </button>
+            <section class="id">
            <section class="details">
             <div id="profile">
                 <img src="public/img/uploads/avatar.jpg" width="200" height="200">
@@ -42,6 +47,7 @@
                 <h2>Description</h2>
             </div>
            </section>
+            </section>
             
         </main>
         

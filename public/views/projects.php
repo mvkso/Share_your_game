@@ -38,10 +38,10 @@
                     </div>
                 </div>
                 <div id="project 2">
-                    <img src="public/uploads/<?= $project->getImage()?>" width="400" height="230">
+                    <img src="public/img/uploads/malediwy.png" width="400" height="230">
                         <div>
-                    <h2><?= $project->getTitle() ?></h2>
-                    <p><?= $project->getDescription() ?></p>
+                    <h2>Title</h2>
+                    <p>description</p>
                     <div class="social-section">
                         <i class="fas fa-heart">600</i>
                         <i class="fas fa-minus-square">101</i>

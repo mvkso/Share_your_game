@@ -1,0 +1,39 @@
+
+main{
+    grid-gap: 7em;
+    padding: 6em;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+button{
+    margin-top: 3em;
+    width: 250px;
+    height: 50px;
+    background: rgb(223, 142, 38,0.5);
+    border: 2px solid black;
+    text-decoration-color: black;
+}
+.id{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5em;
+    padding: 8em;
+    overflow: auto;
+}
+
+
+@media only screen and (max-device-width: 420px) {
+    main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    
+
+  
+    
+
+}
