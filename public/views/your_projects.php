@@ -29,8 +29,20 @@
                 YOUR ACCOUNT
             </a>
         </button>
-        <section class="id">
-
+        <section class="projects_display">
+            <?php foreach ($projects as $project): ?>
+                <div id="project 1">
+                    <img src="public/uploads/<?= $project->getImage() ?>" width="400" height="230">
+                    <div>
+                        <h2><?=$project->getTitle(); ?></h2>
+                        <p><?=$project->getDescription(); ?></p>
+                        <div class="social-section">
+                            <i class="fas fa-heart">600</i>
+                            <i class="fas fa-minus-square">101</i>
+                        </div>
+                    </div>
+                </div>
+            <?php endforeach; ?>
         </section>
 
     </main>

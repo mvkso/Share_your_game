@@ -13,7 +13,7 @@ Routing::get('projects','ProjectController');
 Routing::get('discover','DiscoverController');
 Routing::get('account','DefaultController');
 Routing::get('contacts','DefaultController');
-Routing::get('yourProjects','DefaultController');
+Routing::get('yourProjects','AccountController');
 Routing::post('login','SecurityController');
 Routing::post('addProject','DiscoverController');
 Routing::post('search','DiscoverController');

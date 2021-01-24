@@ -79,4 +79,27 @@ class ProjectRepository extends Repository
 
     }
 
+    public function getProjectById(int $id): array
+    {
+        $result = [];
+        $stmt = $this->database->connect()->prepare('
+            SELECT * FROM projects WHERE id_assigned = :id
+        ');
+        $stmt->bindParam(':id',$id, PDO::PARAM_INT);
+        $stmt->execute();
+        $projects = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        foreach ($projects as $project){
+            $result[] = new Project(
+                $project['title'],
+                $project['description'],
+                $project['image']
+            );
+        }
+
+        return $result;
+
+    }
+
+
 }
