@@ -1,5 +1,5 @@
 const search = document.querySelector('input[placeholder="SEARCH"]');
-const projectContainer = document.querySelector(".projects_display");
+const projectContainer = document.querySelector(".projects_form");
 
 search.addEventListener("keyup", function (event){
     if(event.key == "Enter"){
@@ -34,13 +34,12 @@ function createProject(project){
     const template = document.querySelector("#project-template");
 
     const clone = template.content.cloneNode(true);
-
+    const div = clone.querySelector("div");
+    div.id = project.id;
     const image = clone.querySelector("img");
     image.src = `/public/uploads/${project.image}`;
     const title = clone.querySelector("h2");
     title.innerHTML = project.title;
-    const description = clone.querySelector("p");
-    description.innerHTML = project.description;
     const like = clone.querySelector(".fa-heart");
     like.innerText = project.like;
     const dislike = clone.querySelector(".fa-minus-square");

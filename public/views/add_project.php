@@ -14,13 +14,9 @@
                
                     <img src="public/img/logo1.png">
                 <button class="projects"><a href="projects" style="text-decoration: none">HOME</a></button>
-                <button class="projects"><a href="contacts" style="text-decoration: none">CONTACTS</a></button>
                 <button class="current_projects"><a href="discover" style="text-decoration: none">DISCOVER</a></button>
                 <button class="projects"><a href="account" style="text-decoration: none">ACCOUNT</a></button>
-                    <form>
-                        <input placeholder="search">
-                    </form>
-                
+                <button class="projects">LOG OUT</button>
 
             </header>
         </nav>
@@ -40,7 +36,7 @@
                 </div>
                <section class="add_projects">
                    <h1>UPLOAD</h1>
-                   <form action="addProject" method="POST" ENCTYPE="multipart/form-data">
+                   <form action="project_view" method="POST" ENCTYPE="multipart/form-data">
                        <?php if(isset($messages)){
                            foreach ($messages as $message) {
                                echo $messages;

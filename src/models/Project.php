@@ -3,16 +3,34 @@
 
 class Project
 {
+    private int $id;
     private $title;
     private $description;
     private $image;
 
 
-    public function __construct($title, $description, $image)
+    public function __construct(int $id=null,$title, $description, $image)
     {
+        $this->id= $id;
         $this->title = $title;
         $this->description = $description;
         $this->image = $image;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param mixed $id
+     */
+    public function setId($id): void
+    {
+        $this->id = $id;
     }
 
 

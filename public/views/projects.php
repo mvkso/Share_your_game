@@ -14,31 +14,30 @@
                
                     <img src="public/img/logo1.png">
                 <button class="current_projects"><a href="projects" style="text-decoration: none">HOME</a></button>
-                <button class="projects"><a href="contacts" style="text-decoration: none">CONTACTS</a></button>
                 <button class="projects"><a href="discover" style="text-decoration: none">DISCOVER</a></button>
                 <button class="projects"><a href="account" style="text-decoration: none">ACCOUNT</a></button>
-                    <form>
-                        <input placeholder="search">
-                    </form>
+                <button class="projects">LOG OUT</button>
 
 
             </header>
         </nav>
         <main>
             <section class="projects">
-                <?php foreach ($projects as $project): ?>
-                <div id="project 1">
-                    <img src="public/uploads/<?= $project->getImage() ?>" width="400" height="230">
-                        <div>
-                    <h2><?=$project->getTitle(); ?></h2>
-                    <p><?=$project->getDescription(); ?></p>
-                    <div class="social-section">
-                        <i class="fas fa-heart">600</i>
-                        <i class="fas fa-minus-square">101</i>
+                <form action="project_view" method="POST">
+                    <?php foreach ($projects as $project): ?>
+                        <div id="<?=$project->getId() ?>" >
+                            <img src="public/uploads/<?= $project->getImage() ?>" width="400" height="230">
+                            <div>
+                                <h2><?=$project->getTitle(); ?></h2>
+                                <div class="social-section">
+                                    <i class="fas fa-heart">600</i>
+                                    <i class="fas fa-minus-square">101</i>
+                                </div>
+                                <button class="submit_button" type="submit">CHECK PROJECT</button>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <?php endforeach; ?>
+                    <?php endforeach; ?>
+                </form>
             </section>
         </main>
         

@@ -21,6 +21,7 @@ class ProjectRepository extends Repository
         }
 
         return new Project(
+            $project['id'],
             $project['title'],
             $project['description'],
             $project['image'],
@@ -57,6 +58,7 @@ class ProjectRepository extends Repository
 
         foreach ($projects as $project){
             $result[] = new Project(
+                $project['id'],
                 $project['title'],
                 $project['description'],
                 $project['image']
@@ -99,6 +101,12 @@ class ProjectRepository extends Repository
 
         return $result;
 
+    }
+
+    public function project_view(){
+        $stmt = $this->data;
+        $project = new Project($_POST['title'], $_POST['description'], $_FILES['file']['name']);
+        $this->render('project_view');
     }
 
 

@@ -13186,67 +13186,69 @@ UC/2236793
       <Type>index</Type>
     </access-method>
     <sequence id="3015" parent="3002" name="projects_id_seq"/>
-    <sequence id="3016" parent="3002" name="users_details_id_seq"/>
-    <sequence id="3017" parent="3002" name="users_id_seq">
+    <sequence id="3016" parent="3002" name="users_account_id_seq"/>
+    <sequence id="3017" parent="3002" name="users_details_id_seq"/>
+    <sequence id="3018" parent="3002" name="users_id_seq">
       <ObjectId>2252755</ObjectId>
       <Owner>ttuhwoepeiwdoz</Owner>
       <StateNumber>6645487</StateNumber>
       <DataType>integer|0s</DataType>
     </sequence>
-    <table id="3018" parent="3002" name="projects"/>
-    <table id="3019" parent="3002" name="users">
+    <table id="3019" parent="3002" name="projects"/>
+    <table id="3020" parent="3002" name="users">
       <ObjectId>2252757</ObjectId>
       <Owner>ttuhwoepeiwdoz</Owner>
       <StateNumber>6645487</StateNumber>
     </table>
-    <table id="3020" parent="3002" name="users_details"/>
-    <table id="3021" parent="3002" name="users_projects"/>
-    <column id="3022" parent="3018" name="id">
+    <table id="3021" parent="3002" name="users_account"/>
+    <table id="3022" parent="3002" name="users_details"/>
+    <table id="3023" parent="3002" name="users_projects"/>
+    <column id="3024" parent="3019" name="id">
       <Position>1</Position>
       <DataType>int4|4s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>nextval(&apos;projects_id_seq&apos;::regclass)</DefaultExpression>
     </column>
-    <column id="3023" parent="3018" name="title">
+    <column id="3025" parent="3019" name="title">
       <Position>2</Position>
       <DataType>varchar(100)|12s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="3024" parent="3018" name="description">
+    <column id="3026" parent="3019" name="description">
       <Position>3</Position>
       <DataType>text|12s</DataType>
     </column>
-    <column id="3025" parent="3018" name="like">
+    <column id="3027" parent="3019" name="like">
       <Position>4</Position>
       <DataType>int4|4s</DataType>
       <DefaultExpression>0</DefaultExpression>
     </column>
-    <column id="3026" parent="3018" name="dislike">
+    <column id="3028" parent="3019" name="dislike">
       <Position>5</Position>
       <DataType>int4|4s</DataType>
       <DefaultExpression>0</DefaultExpression>
     </column>
-    <column id="3027" parent="3018" name="created_at">
+    <column id="3029" parent="3019" name="created_at">
       <Position>6</Position>
       <DataType>date|91s</DataType>
     </column>
-    <column id="3028" parent="3018" name="id_assigned">
+    <column id="3030" parent="3019" name="id_assigned">
       <Position>7</Position>
       <DataType>int4|4s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="3029" parent="3018" name="image">
+    <column id="3031" parent="3019" name="image">
       <Position>8</Position>
       <DataType>varchar(255)|12s</DataType>
     </column>
-    <index id="3030" parent="3018" name="projects_id_uindex">
+    <index id="3032" parent="3019" name="projects_id_uindex">
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="3031" parent="3018" name="projects_id_uindex">
+    <key id="3033" parent="3019" name="projects_id_uindex">
       <ColNames>id</ColNames>
     </key>
-    <foreign-key id="3032" parent="3018" name="projects_users_id_fk">
+    <foreign-key id="3034" parent="3019" name="projects_users_id_fk">
       <ColNames>id_assigned</ColNames>
       <RefTableName>users</RefTableName>
       <RefKeyName>users_pk</RefKeyName>
@@ -13254,7 +13256,7 @@ UC/2236793
       <OnDelete>cascade</OnDelete>
       <OnUpdate>cascade</OnUpdate>
     </foreign-key>
-    <column id="3033" parent="3019" name="id">
+    <column id="3035" parent="3020" name="id">
       <Position>1</Position>
       <DataType>int4|4s</DataType>
       <NotNull>1</NotNull>
@@ -13262,27 +13264,27 @@ UC/2236793
       <DefaultExpression>nextval(&apos;users_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
-    <column id="3034" parent="3019" name="email">
+    <column id="3036" parent="3020" name="email">
       <Position>2</Position>
       <DataType>varchar(255)|12s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>6645487</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="3035" parent="3019" name="password">
+    <column id="3037" parent="3020" name="password">
       <Position>3</Position>
       <DataType>varchar(255)|12s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>6645487</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="3036" parent="3019" name="id_user_details">
+    <column id="3038" parent="3020" name="id_user_details">
       <Position>4</Position>
       <DataType>int4|4s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>0</DefaultExpression>
     </column>
-    <index id="3037" parent="3019" name="users_id_uindex">
+    <index id="3039" parent="3020" name="users_id_uindex">
       <ObjectId>2252764</ObjectId>
       <StateNumber>6645488</StateNumber>
       <ColNames>id</ColNames>
@@ -13291,7 +13293,7 @@ UC/2236793
       <CollationIds>0</CollationIds>
       <ClassIds>1978</ClassIds>
     </index>
-    <index id="3038" parent="3019" name="users_pk">
+    <index id="3040" parent="3020" name="users_pk">
       <ObjectId>2252765</ObjectId>
       <StateNumber>6645489</StateNumber>
       <ColNames>id</ColNames>
@@ -13301,14 +13303,14 @@ UC/2236793
       <CollationIds>0</CollationIds>
       <ClassIds>1978</ClassIds>
     </index>
-    <key id="3039" parent="3019" name="users_pk">
+    <key id="3041" parent="3020" name="users_pk">
       <ObjectId>2252766</ObjectId>
       <StateNumber>6645489</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>users_pk</UnderlyingIndexName>
     </key>
-    <foreign-key id="3040" parent="3019" name="details_users___fk">
+    <foreign-key id="3042" parent="3020" name="details_users___fk">
       <ColNames>id_user_details</ColNames>
       <RefTableName>users_details</RefTableName>
       <RefKeyName>users_details_pk</RefKeyName>
@@ -13316,49 +13318,94 @@ UC/2236793
       <OnDelete>cascade</OnDelete>
       <OnUpdate>cascade</OnUpdate>
     </foreign-key>
-    <column id="3041" parent="3020" name="id">
+    <column id="3043" parent="3021" name="id">
+      <Position>1</Position>
+      <DataType>int4|4s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>nextval(&apos;users_account_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="3044" parent="3021" name="image">
+      <Position>2</Position>
+      <Comment>ola.png</Comment>
+      <DataType>varchar(255)|12s</DataType>
+      <DefaultExpression>&apos;avatar.jpg&apos;</DefaultExpression>
+    </column>
+    <column id="3045" parent="3021" name="age">
+      <Position>3</Position>
+      <DataType>int4|4s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="3046" parent="3021" name="country">
+      <Position>4</Position>
+      <DataType>varchar(255)|12s</DataType>
+    </column>
+    <column id="3047" parent="3021" name="experience">
+      <Position>5</Position>
+      <DataType>text|12s</DataType>
+    </column>
+    <column id="3048" parent="3021" name="aboutme">
+      <Position>6</Position>
+      <DataType>text|12s</DataType>
+    </column>
+    <column id="3049" parent="3021" name="description">
+      <Position>7</Position>
+      <DataType>text|12s</DataType>
+    </column>
+    <index id="3050" parent="3021" name="users_account_id_uindex">
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="3051" parent="3021" name="users_account_pk">
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="3052" parent="3021" name="users_account_pk">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="3053" parent="3022" name="id">
       <Position>1</Position>
       <DataType>int4|4s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>nextval(&apos;users_details_id_seq&apos;::regclass)</DefaultExpression>
     </column>
-    <column id="3042" parent="3020" name="name">
+    <column id="3054" parent="3022" name="name">
       <Position>2</Position>
       <DataType>varchar(100)|12s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="3043" parent="3020" name="surname">
+    <column id="3055" parent="3022" name="surname">
       <Position>3</Position>
       <DataType>varchar(100)|12s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="3044" parent="3020" name="phone">
+    <column id="3056" parent="3022" name="phone">
       <Position>4</Position>
       <DataType>varchar(20)|12s</DataType>
     </column>
-    <index id="3045" parent="3020" name="users_details_id_uindex">
+    <index id="3057" parent="3022" name="users_details_id_uindex">
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="3046" parent="3020" name="users_details_pk">
+    <index id="3058" parent="3022" name="users_details_pk">
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="3047" parent="3020" name="users_details_pk">
+    <key id="3059" parent="3022" name="users_details_pk">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="3048" parent="3021" name="id_user">
+    <column id="3060" parent="3023" name="id_user">
       <Position>1</Position>
       <DataType>int4|4s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="3049" parent="3021" name="id_project">
+    <column id="3061" parent="3023" name="id_project">
       <Position>2</Position>
       <DataType>int4|4s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <foreign-key id="3050" parent="3021" name="user_users_projects___fk">
+    <foreign-key id="3062" parent="3023" name="user_users_projects___fk">
       <ColNames>id_user</ColNames>
       <RefTableName>users</RefTableName>
       <RefKeyName>users_pk</RefKeyName>
@@ -13366,7 +13413,7 @@ UC/2236793
       <OnDelete>cascade</OnDelete>
       <OnUpdate>cascade</OnUpdate>
     </foreign-key>
-    <foreign-key id="3051" parent="3021" name="project_users_projects___fk">
+    <foreign-key id="3063" parent="3023" name="project_users_projects___fk">
       <ColNames>id_project</ColNames>
       <RefTableName>projects</RefTableName>
       <RefKeyName>projects_id_uindex</RefKeyName>

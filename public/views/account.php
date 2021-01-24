@@ -14,19 +14,18 @@
                
                     <img src="public/img/logo1.png">
                 <button class="projects"><a href="projects" style="text-decoration: none">HOME</a></button>
-                <button class="projects"><a href="contacts" style="text-decoration: none">CONTACTS</a></button>
                 <button class="projects"><a href="discover" style="text-decoration: none">DISCOVER</a></button>
                 <button class="current_projects"><a href="account" style="text-decoration: none">ACCOUNT</a></button>
-                    <form>
-                        <input placeholder="search">
-                    </form>
-                
+                <button class="projects">LOG OUT</button>
+
 
             </header>
         </nav>
         <main>
             <button class="your_project"><a href="yourProjects" style="text-decoration: none">
-                    YOUR PROJECTS
+                    <span style="color: white; ">
+                        GO TO YOUR PROJECTS
+                            </span>
                 </a>
             </button>
             <section class="id">
