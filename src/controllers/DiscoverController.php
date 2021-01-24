@@ -21,6 +21,11 @@ class DiscoverController extends AppController
         $this->projectRepository = new ProjectRepository();
     }
 
+    public function discover(){
+        $projects = $this->projectRepository->getProjects();
+        $this->render('discover', ['projects' => $projects]);
+    }
+
 
     public function addProject()
     {

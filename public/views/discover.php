@@ -42,6 +42,9 @@
                 </div>
 
            </section>
+        <section class="projects_display">
+
+        </section>
             
         </main>
         
@@ -49,3 +52,17 @@
        
     </div>
 </body>
+
+<template id="project-template">
+    <div id="project 1">
+        <img src="" width="400" height="230">
+        <div>
+            <h2>title</h2>
+            <p>description</p>
+            <div class="social-section">
+                <i class="fas fa-heart">0</i>
+                <i class="fas fa-minus-square">0</i>
+            </div>
+        </div>
+    </div>
+</template>

@@ -3,7 +3,12 @@ body{
     background-color: lightpink;
     background-attachment: fixed;
 }
-
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
 main>.search{
     grid-gap: 8em;
@@ -63,6 +68,56 @@ button{
 
 
 }
+.projects_display{
+    margin-top: -10em;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5em;
+    padding: 8em;
+    overflow: auto;
+}
+
+.projects_display>div>img {
+    object-fit: cover;
+    border-radius: 1em 1em 0 0;
+}
+
+.projects_display>div>div{
+
+    color: black;
+    margin: 1em;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+
+}
+
+.projects_display>div{
+    /* background: transparent linear-gradient(180deg, #FFFFFF 0%, #FFD506 100%) 0% 0% no-repeat padding-box; */
+    background: #DF8E26;
+
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 1em 1em 0 0;
+    height: 400px;
+    width: 400px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.projects_display>div{
+    border-radius: 1em 1em;
+}
+
+.projects_display{
+    overflow-x: hidden;
+    overflow-y:auto;
+}
+
 
 @media only screen and (max-device-width: 420px) {
     main{

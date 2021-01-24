@@ -12,11 +12,6 @@ class DefaultController extends AppController{
         $this->render('register');
     }
 
-    public function discover(){
-        $this->render('discover');
-
-    }
-
     public function account(){
         $this->render('account');
 

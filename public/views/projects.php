@@ -4,7 +4,6 @@
     <link rel="stylesheet" type="text/css" href="public/css/style.css">
     <link rel="stylesheet" type="text/css" href="public/css/projects.css">
     <script src="https://kit.fontawesome.com/723297a893.js" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="./public/js/search.js" defer><</script>
     <title>PROJECTS</title>
 
 </head>

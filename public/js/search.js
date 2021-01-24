@@ -1,5 +1,5 @@
 const search = document.querySelector('input[placeholder="SEARCH"]');
-const projectContainer = document.querySelector(".projects");
+const projectContainer = document.querySelector(".projects_display");
 
 search.addEventListener("keyup", function (event){
     if(event.key == "Enter"){
@@ -45,6 +45,7 @@ function createProject(project){
     like.innerText = project.like;
     const dislike = clone.querySelector(".fa-minus-square");
     dislike.innerText = project.dislike;
+
 
     projectContainer.appendChild(clone);
 }
