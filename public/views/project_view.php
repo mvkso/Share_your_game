@@ -21,8 +21,14 @@
         </header>
     </nav>
     <main>
-        <section class="projects_display">
-
+        <section class="projects_display" id="<?= $project->getId(); ?>">
+            <div class="photo">
+                <img src="public/uploads/<?= $project->getImage() ?>" width="700" height="500">
+            </div>
+            <div class="text_part">
+                <h2><?=$project->getTitle(); ?></h2>
+            <p><?= $project->getDescription(); ?></p>
+            </div>
         </section>
 
     </main>

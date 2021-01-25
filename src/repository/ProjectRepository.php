@@ -2,14 +2,16 @@
 
 require_once 'Repository.php';
 require_once __DIR__.'/../models/Project.php';
+require_once __DIR__.'/../controllers/AppController.php';
 
 class ProjectRepository extends Repository
 {
 
+
     public function getProject(int $id): ?Project
     {
         $stmt = $this->database->connect()->prepare('
-            SELECT * FROM project WHERE id = :id
+            SELECT * FROM projects WHERE id = :id
         ');
         $stmt->bindParam(':id', $id, PDO::PARAM_INT);
         $stmt->execute();
@@ -46,6 +48,7 @@ class ProjectRepository extends Repository
             ]);
     }
 
+
     public function getProjects(): array
     {
         $result = [];
@@ -81,7 +84,7 @@ class ProjectRepository extends Repository
 
     }
 
-    public function getProjectById(int $id): array
+    public function getProjectByUserId(int $id): array
     {
         $result = [];
         $stmt = $this->database->connect()->prepare('
@@ -93,6 +96,7 @@ class ProjectRepository extends Repository
 
         foreach ($projects as $project){
             $result[] = new Project(
+                $project['id'],
                 $project['title'],
                 $project['description'],
                 $project['image']
@@ -103,11 +107,7 @@ class ProjectRepository extends Repository
 
     }
 
-    public function project_view(){
-        $stmt = $this->data;
-        $project = new Project($_POST['title'], $_POST['description'], $_FILES['file']['name']);
-        $this->render('project_view');
-    }
+
 
 
 }

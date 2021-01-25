@@ -14,7 +14,7 @@ class AccountController extends AppController
     }
 
     public function yourProjects(){
-        $projects = $this->projectRepository->getProjectById(1);
+        $projects = $this->projectRepository->getProjectByUserId(1);
         $this->render('your_projects', ['projects' => $projects]);
     }
 

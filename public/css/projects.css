@@ -46,7 +46,7 @@ section>form{
     overflow-y:auto;
 }
 
-.projects>form>div>div>.submit_button{
+.projects>form>div>div>button{
     margin-top: 15px;
     background: black;
 

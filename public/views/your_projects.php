@@ -31,7 +31,7 @@
         <section class="projects_display">
             <form action="project_view" method="POST">
             <?php foreach ($projects as $project): ?>
-                <div id="<?=$project->getId(); ?>" >
+                <div name="project_id" id="<?=$project->getId(); ?>" >
                     <img src="public/uploads/<?= $project->getImage() ?>" width="400" height="230">
                     <div>
                         <h2><?=$project->getTitle(); ?></h2>
@@ -39,7 +39,7 @@
                             <i class="fas fa-heart">600</i>
                             <i class="fas fa-minus-square">101</i>
                         </div>
-                        <button class="submit_button" type="submit">CHECK PROJECT</button>
+                        <button class="submit_button" name="submit_button" type="submit" value="<?= $project->getId(); ?>">CHECK PROJECT</button>
                     </div>
                 </div>
             <?php endforeach; ?>

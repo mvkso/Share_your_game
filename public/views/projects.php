@@ -30,12 +30,13 @@
                             <div>
                                 <h2><?=$project->getTitle(); ?></h2>
                                 <div class="social-section">
-                                    <i class="fas fa-heart">600</i>
+                                    <i class="fas fa-heart">10</i>
                                     <i class="fas fa-minus-square">101</i>
                                 </div>
-                                <button class="submit_button" type="submit">CHECK PROJECT</button>
+                                <button name="submit_button" value="<?= $project->getId(); ?>">CHECK PROJECT</button>
                             </div>
                         </div>
+
                     <?php endforeach; ?>
                 </form>
             </section>

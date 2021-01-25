@@ -61,7 +61,7 @@
                 <i class="fas fa-heart">0</i>
                 <i class="fas fa-minus-square">0</i>
             </div>
-            <button class="submit_button" type="submit">CHECK PROJECT</button>
+            <button class="submit_button" name="submit_button" type="submit">CHECK PROJECT</button>
         </div>
     </div>
 </template>

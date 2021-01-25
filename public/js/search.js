@@ -44,6 +44,8 @@ function createProject(project){
     like.innerText = project.like;
     const dislike = clone.querySelector(".fa-minus-square");
     dislike.innerText = project.dislike;
+    const button = clone.querySelector("button");
+    button.value = project.id;
 
 
     projectContainer.appendChild(clone);
