@@ -43,6 +43,8 @@ class UserRepository extends Repository
             $user->getPhone()
         ]);
 
+
+
         $stmt = $this->database->connect()->prepare('
             INSERT INTO users (email, password, id_user_details)
             VALUES (?, ?, ?)
@@ -51,8 +53,23 @@ class UserRepository extends Repository
         $stmt->execute([
             $user->getEmail(),
             $user->getPassword(),
-            $this->getUserDetailsId($user)
+            $this->getUserDetailsId($user),
         ]);
+
+        $this->setUserId($user);
+
+        $stmt = $this->database->connect()->prepare('
+            INSERT INTO users_account (user_id) VALUES (?)
+        ');
+
+        $stmt->execute([
+            $user->getId()
+        ]);
+
+
+
+
+
     }
 
     public function getUserDetailsId(User $user): int
@@ -68,4 +85,29 @@ class UserRepository extends Repository
         $data = $stmt->fetch(PDO::FETCH_ASSOC);
         return $data['id'];
     }
+
+    public function  getUserAccountId(User $user)
+    {
+        $stmt = $this->database->connect()->prepare('
+            SELECT * FROM public.users_account WHERE user_id = :id
+        ');
+        $stmt->bindParam(':id', $user->getId(), PDO::PARAM_INT);
+        $stmt->execute();
+        $data = $stmt->fetch(PDO::FETCH_ASSOC);
+        return $data['id'];
+    }
+
+    public function setUserId(User $user){
+        $stmt = $this->database->connect()->prepare('
+            SELECT * FROM public.users WHERE email = :email
+        ');
+        $stmt->bindParam(':email', $user->getEmail(), PDO::PARAM_STR);
+        $stmt->execute();
+        $data = $stmt->fetch(PDO::FETCH_ASSOC);
+        $user->setId($data['id']);
+    }
+
+
+
+
 }

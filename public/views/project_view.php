@@ -26,8 +26,8 @@
                 <img src="public/uploads/<?= $project->getImage() ?>" width="700" height="500">
             </div>
             <div class="text_part">
-                <h2><?=$project->getTitle(); ?></h2>
-            <p><?= $project->getDescription(); ?></p>
+                <h2 style="font-family:Verdana"><?=$project->getTitle(); ?></h2>
+            <p style="font-family:Verdana"><?= $project->getDescription(); ?></p>
             </div>
         </section>
 

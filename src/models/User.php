@@ -7,6 +7,14 @@ class User {
     private $name;
     private $surname;
     private $phone;
+    private $image;
+    private $age;
+    private $country;
+    private $experience;
+    private $aboutme;
+    private $description;
+
+
 
     public function __construct(
         int $id = null,
@@ -72,4 +80,76 @@ class User {
     {
         $this->phone = $phone;
     }
+
+    public function getImage()
+    {
+        return $this->image;
+    }
+
+
+    public function setImage($image): void
+    {
+        $this->image = $image;
+    }
+
+
+    public function getAge()
+    {
+        return $this->age;
+    }
+
+
+    public function setAge($age): void
+    {
+        $this->age = $age;
+    }
+
+
+    public function getCountry()
+    {
+        return $this->country;
+    }
+
+
+    public function setCountry($country): void
+    {
+        $this->country = $country;
+    }
+
+
+    public function getExperience()
+    {
+        return $this->experience;
+    }
+
+
+    public function setExperience($experience): void
+    {
+        $this->experience = $experience;
+    }
+
+
+    public function getAboutme()
+    {
+        return $this->aboutme;
+    }
+
+
+    public function setAboutme($aboutme): void
+    {
+        $this->aboutme = $aboutme;
+    }
+
+
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+
+    public function setDescription($description): void
+    {
+        $this->description = $description;
+    }
+
 }
