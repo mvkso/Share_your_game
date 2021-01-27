@@ -16,7 +16,7 @@
                 <button class="projects"><a href="projects" style="text-decoration: none">HOME</a></button>
                 <button class="current_projects"><a href="discover" style="text-decoration: none">DISCOVER</a></button>
                 <button class="projects"><a href="account" style="text-decoration: none">ACCOUNT</a></button>
-                <button class="projects">LOG OUT</button>
+                <button class="projects"><a href="logout" style="text-decoration: none">LOG OUT</a></button>
 
             </header>
         </nav>
