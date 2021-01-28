@@ -40,6 +40,8 @@ class SecurityController extends AppController {
 
         $url = "http://$_SERVER[HTTP_HOST]";
         $_SESSION['user'] = $this->userRepository->getId($user->getEmail());
+        $_SESSION['name'] = $user->getName();
+        $_SESSION['surname'] = $user->getSurname();
 
         if(!isset($_SESSION['user']) || $_SESSION['user'] !== true){
             header("Location: {$url}/login");

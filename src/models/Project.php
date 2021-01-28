@@ -7,6 +7,10 @@ class Project
     private $title;
     private $description;
     private $image;
+    private $authorName = "Kamil";
+    private $authorSurame = "Maksymowicz";
+
+
 
 
     public function __construct($title, $description, $image,$id=null)
@@ -67,6 +71,29 @@ class Project
     public function setImage(string $image): void
     {
         $this->image = $image;
+    }
+
+    public function getAuthorName()
+    {
+        return $this->authorName;
+    }
+
+
+    public function setAuthorName($authorName): void
+    {
+        $this->authorName = $authorName;
+    }
+
+
+    public function getAuthorSurame()
+    {
+        return $this->authorSurame;
+    }
+
+
+    public function setAuthorSurame($authorSurame): void
+    {
+        $this->authorSurame = $authorSurame;
     }
 
 

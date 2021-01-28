@@ -36,6 +36,8 @@ class DiscoverController extends AppController
             );
 
             $project = new Project($_POST['title'], $_POST['description'], $_FILES['file']['name'],null);
+            $project->setAuthorName($_SESSION['name']);
+            $project->setAuthorSurame($_SESSION['surname']);
             $this->projectRepository->addProject($project);
 
 

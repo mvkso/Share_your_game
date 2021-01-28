@@ -28,7 +28,7 @@ class ProjectRepository extends Repository
             $project['image'],
             $project['id']
         );
-        
+
     }
 
     public function addProject(Project $project): void
@@ -62,10 +62,10 @@ class ProjectRepository extends Repository
 
         foreach ($projects as $project){
             $result[] = new Project(
-                $project['id'],
                 $project['title'],
                 $project['description'],
-                $project['image']
+                $project['image'],
+                $project['id']
             );
         }
 
@@ -97,14 +97,27 @@ class ProjectRepository extends Repository
 
         foreach ($projects as $project){
             $result[] = new Project(
-                $project['id'],
                 $project['title'],
                 $project['description'],
-                $project['image']
+                $project['image'],
+                $project['id']
             );
         }
 
         return $result;
+
+
+
+
+    }
+
+    public function getUserIdByProjectId($id)
+    {
+        $stmt = $this->database->connect()->prepare('
+            SELECT * FROM projects WHERE id = :id
+        ');
+        $stmt->bindParam(':id',$id, PDO::PARAM_INT);
+        $stmt->execute();
 
     }
 

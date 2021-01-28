@@ -13,7 +13,7 @@
         <header>
 
             <img src="public/img/logo1.png">
-            <button class="projects"><a href="projects" style="text-decoration: none">HOME</a></button>
+            <button class="projects"><a href="projects" style="text-decoration: none">PROJECTS</a></button>
             <button class="projects"><a href="discover" style="text-decoration: none">DISCOVER</a></button>
             <button class="projects"><a href="account" style="text-decoration: none">ACCOUNT</a></button>
             <button class="projects"><a href="logout" style="text-decoration: none">LOG OUT</a></button>
@@ -30,6 +30,7 @@
 
             <p style="font-family:Verdana"><?= $project->getDescription(); ?></p>
             </div>
+
         </section>
 
     </main>
