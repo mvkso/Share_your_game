@@ -19,7 +19,7 @@ button{
 
 }
 
-.edit_account{;
+.projects_display{;
     margin-top: 10em;
     display: flex;
     flex-direction: column;
@@ -31,7 +31,7 @@ button{
     text-align: center;
 
 }
-.edit_account>form{
+.projects_display>form{
 
     width:500px;
     height: 600px;
@@ -46,7 +46,7 @@ button{
 }
 
 
-.edit_account>form>div>div{
+.projects_display>form>div>div{
 
     color: white;
     margin: 1em;
@@ -58,11 +58,11 @@ button{
 
 }
 
-.edit_account>form{
+.projects_display>form{
 
 }
 
-.edit_account>form>div>div>.submit_button{
+.projects_display>form>div>div>.submit_button{
     margin-top: 15px;
     background: black;
 

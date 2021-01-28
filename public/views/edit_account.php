@@ -21,7 +21,7 @@
             </header>
         </nav>
         <main>
-               <section class="edit_account">
+               <section class="projects_display">
 
                    <form action="edit_account" method="POST" ENCTYPE="multipart/form-data">
                        <h1 style="font-family:Verdana">EDIT</h1>
