@@ -43,6 +43,56 @@ class UserRepository extends Repository
         );
     }
 
+    public function getUserDetailsAndAccountById(int $id): ?User
+    {
+
+        $stmt = $this->database->connect()->prepare('
+            SELECT * FROM users_account ua LEFT JOIN users u 
+            ON ua.user_id = u.id WHERE user_id = :id
+        ');
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+        $stmt->execute();
+
+        $data = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        $user = new User(
+            $_SESSION['user'],
+            $data['email'],
+            $data['password'],
+            $_SESSION['name'],
+            $_SESSION['surname']
+        );
+
+        $user->setAge($data['age']);
+        $user->setImage($data['image']);
+        $user->setCountry($data['country']);
+        $user->setExperience($data['experience']);
+        $user->setAboutme($data['aboutme']);
+        $user->setDescription($data['description']);
+
+        return $user;
+
+
+    }
+
+    public function editUserAccount(User $user, int $id){
+        $stmt = $this->database->connect()->prepare('
+            UPDATE users_account SET "image" = :image, "age"= :age, "country" = :country, "experience" = :experience,
+                                     "aboutme"= :aboutme, "description"= :description
+            WHERE user_id = :id
+        ');
+        $stmt->bindParam(':image', $user->getImage(), PDO::PARAM_STR);
+        $stmt->bindParam(':age', $user->getAge(), PDO::PARAM_INT);
+        $stmt->bindParam(':country', $user->getCountry(), PDO::PARAM_STR);
+        $stmt->bindParam(':experience', $user->getExperience(), PDO::PARAM_STR);
+        $stmt->bindParam(':aboutme', $user->getAboutme(), PDO::PARAM_STR);
+        $stmt->bindParam(':description', $user->getDescription(), PDO::PARAM_STR);
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+
+        $stmt->execute();
+
+    }
+
     public function addUser(User $user)
     {
         $stmt = $this->database->connect()->prepare('

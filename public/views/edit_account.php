@@ -2,9 +2,9 @@
 <!DOCTYPE html>
 <head>
     <link rel="stylesheet" type="text/css" href="public/css/style.css">
-    <link rel="stylesheet" type="text/css" href="public/css/discover.css">
+    <link rel="stylesheet" type="text/css" href="public/css/edit_account.css">
     <script src="https://kit.fontawesome.com/723297a893.js" crossorigin="anonymous"></script>
-    <title>ADD PROJECT</title>
+    <title>EDIT ACCOUNT</title>
 
 </head>
 <body>
@@ -14,23 +14,17 @@
                
                     <img src="public/img/logo1.png">
                 <button class="projects"><a href="projects" style="text-decoration: none">PROJECTS</a></button>
-                <button class="current_projects"><a href="discover" style="text-decoration: none">DISCOVER</a></button>
+                <button class="projects"><a href="discover" style="text-decoration: none">DISCOVER</a></button>
                 <button class="projects"><a href="account" style="text-decoration: none">ACCOUNT</a></button>
                 <button class="projects"><a href="logout" style="text-decoration: none">LOG OUT</a></button>
 
             </header>
         </nav>
         <main>
-           <section class="search">
-                <input placeholder="SEARCH">
-                <div>
-                    <button class="add_project" type="submit">
-                        + ADD PROJECT
-                    </button>
-                </div>
-               <section class="add_projects">
-                   <h1>UPLOAD</h1>
-                   <form action="addProject" method="POST" ENCTYPE="multipart/form-data">
+               <section class="edit_account">
+
+                   <form action="edit_account" method="POST" ENCTYPE="multipart/form-data">
+                       <h1 style="font-family:Verdana">EDIT</h1>
                        <?php if(isset($messages)){
                            foreach ($messages as $message) {
                                echo $messages;
@@ -38,10 +32,14 @@
 
                        }
                        ?>
-                       <input name="title" type="text" placeholder="title">
+                       <input type="file"  name="image" >
+                       <input name="age" type="text" placeholder="age">
+                       <input name="country" type="text" placeholder="country">
+                       <textarea name="experience" rows="5" placeholder="experience"></textarea>
+                       <textarea name="aboutme" rows="5" placeholder="about me"></textarea>
                        <textarea name="description" rows="5" placeholder="description"></textarea>
-                       <input type="file" name="file" >
-                       <button type="submit">SEND</button>
+
+                       <button type="submit">EDIT</button>
                    </form>
                </section>
 

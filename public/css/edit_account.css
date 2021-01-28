@@ -1,0 +1,104 @@
+body{
+    margin: 0;
+    background-attachment: fixed;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+button{
+    width: 250px;
+    height: 40px;
+    /*background: rgb(223, 142, 38,0.5) ;*/
+    background: purple;
+    border: 2px solid black;
+    text-decoration-color: black;
+
+}
+
+.edit_account{;
+    margin-top: 10em;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    background: rgb(255,255,255,0.5);
+    border-radius: 2em 2em;
+    height: 700px;
+    justify-content: center;
+    text-align: center;
+
+}
+.edit_account>form{
+
+    width:500px;
+    height: 600px;
+    display: flex;
+    padding: 2em;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+    overflow-y:auto;
+
+
+}
+
+
+.edit_account>form>div>div{
+
+    color: white;
+    margin: 1em;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+
+}
+
+.edit_account>form{
+
+}
+
+.edit_account>form>div>div>.submit_button{
+    margin-top: 15px;
+    background: black;
+
+}
+
+@media only screen and (max-device-width: 420px) {
+    main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        
+    }
+    
+    section{
+        margin-top: -2em;
+        width: 200px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1em;
+    }
+    .search>input{
+        width: auto;
+       
+        
+    }
+
+    .search>div{
+        width: 50vw;
+       height: 80px;
+       align-items: center;
+       text-align: center;
+    }
+
+    
+    
+
+}

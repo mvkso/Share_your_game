@@ -12,10 +12,7 @@ class DefaultController extends AppController{
         $this->render('register');
     }
 
-    public function account(){
-        $this->render('account');
 
-    }
 
     public function contacts(){
         $this->render('contacts');

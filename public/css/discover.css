@@ -69,7 +69,7 @@ button{
 
 
 }
-.projects_display>form{
+.edit_account>form{
     margin-top: -10em;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -78,12 +78,12 @@ button{
     overflow: auto;
 }
 
-.projects_display>form>div>img {
+.edit_account>form>div>img {
     object-fit: cover;
     border-radius: 1em 1em 0 0;
 }
 
-.projects_display>form>div>div{
+.edit_account>form>div>div{
 
     color: white;
     margin: 1em;
@@ -95,7 +95,7 @@ button{
 
 }
 
-.projects_display>form>div{
+.edit_account>form>div{
     /* background: transparent linear-gradient(180deg, #FFFFFF 0%, #FFD506 100%) 0% 0% no-repeat padding-box; */
     /*background: #DF8E26;*/
     background: purple;
@@ -112,16 +112,16 @@ button{
 
 }
 
-.projects_display>form>div:hover{
+.edit_account>form>div:hover{
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
-.projects_display>form{
+.edit_account>form{
     overflow-x: hidden;
     overflow-y:auto;
 }
 
-.projects_display>form>div>div>.submit_button{
+.edit_account>form>div>div>.submit_button{
     margin-top: 15px;
     background: black;
 

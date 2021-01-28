@@ -23,8 +23,6 @@ class ProjectController extends AppController
     }
 
     public function project_view(){
-        var_dump($_POST['submit_button']);
-        var_dump("ELO");
         $projects = $this->projectRepository->getProject($_POST['submit_button']);
         $this->render('project_view',['project' => $projects]);
 

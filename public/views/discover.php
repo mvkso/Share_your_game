@@ -25,12 +25,6 @@
            <section class="search">
                 <input placeholder="SEARCH">
                    <div>
-                    
-<!--                    <div class="social-section">-->
-<!--                        <i class="fas fa-angle-double-down"></i>-->
-<!--                        FILTERS-->
-<!--                        -->
-<!--                        </div>-->
                     <button class="add_project"><a href="addProject" ><span style="color: white; ">
                         + ADD PROJECT
                             </span></a>

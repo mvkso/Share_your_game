@@ -31,19 +31,25 @@
             <section class="id">
            <section class="details">
             <div id="profile">
-                <img src="public/img/uploads/avatar.jpg" width="200" height="200">
-                <h2 id="name">Name Surname</h2>
-                <p id="age">25</p>
-                <p id="location">Poland</p>
-                <p id="experience">Experience</p>
-            </div>
+                <img src="public/img/uploads/<?=$user->getImage()?>" width="200" height="200">
+                <h2 style="font-family:Verdana" id="name"><?= $user->getName(), $user->getSurname()?></h2>
+                <p style="font-family:Verdana" id="age">Age: <?= $user->getAge()?></p>
+                <p style="font-family:Verdana" id="location">Country: <?=$user->getCountry()?></p>
+                <p style="font-family:Verdana" id="experience">Experience: <?=$user->getExperience()?></p>
+                <div id="settings" width="30" height="30">
+                    <a href="edit_account">
+                        <img src="public/img/uploads/settingsIcon.png" width="30" height="30">
+                    </a>
+                </div>
            </section>
            <section class="aboutme">
             <div id="person_info">
-                <h2>About Me</h2>
+                <h2 style="font-family:Verdana">About Me</h2>
+                <p style="font-family:Verdana"><?=$user->getAboutme()?></p>
             </div>
             <div id="description">
-                <h2>Description</h2>
+                <h2 style="font-family:Verdana">Description</h2>
+                <p style="font-family:Verdana"><?=$user->getDescription()?></p>
             </div>
            </section>
             </section>

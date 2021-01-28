@@ -16,8 +16,9 @@ Routing::get('discover','DiscoverController');
 Routing::post('addProject','DiscoverController');
 Routing::post('search','DiscoverController');
 
-Routing::get('account','DefaultController');
+Routing::get('account','AccountController');
 Routing::get('yourProjects','AccountController');
+Routing::post('edit_account','AccountController');
 
 Routing::post('project_view','ProjectController');
 Routing::post('logout', "SecurityController");
