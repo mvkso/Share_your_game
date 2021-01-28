@@ -26,14 +26,14 @@
                 <form action="project_view" method="POST">
                     <?php foreach ($projects as $project): ?>
                         <div id="<?=$project->getId() ?>" >
-                            <img src="public/uploads/<?= $project->getImage() ?>" width="400" height="230">
+                            <img src="public/uploads/<?= $project->getId() ?>" width="400" height="230">
                             <div>
-                                <h2><?=$project->getTitle(); ?></h2>
+                                <h2><?=$project->getDescription(); ?></h2>
                                 <div class="social-section">
                                     <i class="fas fa-heart">10</i>
                                     <i class="fas fa-minus-square">101</i>
                                 </div>
-                                <button name="submit_button" value="<?= $project->getId(); ?>">CHECK PROJECT</button>
+                                <button name="submit_button" value="<?= $project->getTitle(); ?>">CHECK PROJECT</button>
                             </div>
                         </div>
 

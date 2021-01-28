@@ -35,7 +35,7 @@ class DiscoverController extends AppController
                 dirname(__DIR__).self::UPLOAD_DIRECTORY.$_FILES['file']['name']
             );
 
-            $project = new Project($_POST['title'], $_POST['description'], $_FILES['file']['name']);
+            $project = new Project($_POST['title'], $_POST['description'], $_FILES['file']['name'],null);
             $this->projectRepository->addProject($project);
 
 

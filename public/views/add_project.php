@@ -36,7 +36,7 @@
                 </div>
                <section class="add_projects">
                    <h1>UPLOAD</h1>
-                   <form action="project_view" method="POST" ENCTYPE="multipart/form-data">
+                   <form action="addProject" method="POST" ENCTYPE="multipart/form-data">
                        <?php if(isset($messages)){
                            foreach ($messages as $message) {
                                echo $messages;

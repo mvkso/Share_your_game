@@ -3,18 +3,18 @@
 
 class Project
 {
-    private int $id;
+    private $id;
     private $title;
     private $description;
     private $image;
 
 
-    public function __construct(int $id=null,$title, $description, $image)
+    public function __construct($title, $description, $image,$id=null)
     {
-        $this->id= $id;
         $this->title = $title;
         $this->description = $description;
         $this->image = $image;
+        $this->id= $id;
     }
 
     /**

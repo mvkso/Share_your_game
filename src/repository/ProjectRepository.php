@@ -23,11 +23,12 @@ class ProjectRepository extends Repository
         }
 
         return new Project(
-            $project['id'],
             $project['title'],
             $project['description'],
             $project['image'],
+            $project['id']
         );
+        
     }
 
     public function addProject(Project $project): void
@@ -37,13 +38,13 @@ class ProjectRepository extends Repository
             INSERT INTO projects (title, description, created_at, id_assigned, image) 
             VALUES(?, ?, ?,?,?)
         ');
-        $assignedById=1;
+        var_dump($_SESSION['user']);
 
         $stmt->execute([
             $project->getTitle(),
             $project->getDescription(),
             $date->format('Y-m-d'),
-            $assignedById,
+            $_SESSION['user'],
             $project->getImage()
             ]);
     }

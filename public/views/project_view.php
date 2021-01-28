@@ -22,11 +22,12 @@
     </nav>
     <main>
         <section class="projects_display" id="<?= $project->getId(); ?>">
+            <h2 style="font-family:Verdana"><?=$project->getTitle(); ?></h2>
             <div class="photo">
                 <img src="public/uploads/<?= $project->getImage() ?>" width="700" height="500">
             </div>
             <div class="text_part">
-                <h2 style="font-family:Verdana"><?=$project->getTitle(); ?></h2>
+
             <p style="font-family:Verdana"><?= $project->getDescription(); ?></p>
             </div>
         </section>
