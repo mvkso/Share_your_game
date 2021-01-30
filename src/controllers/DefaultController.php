@@ -12,7 +12,9 @@ class DefaultController extends AppController{
         $this->render('register');
     }
 
-
+    public function spotify(){
+        $this->render('spotify');
+    }
 
     public function contacts(){
         $this->render('contacts');
