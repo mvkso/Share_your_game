@@ -11,6 +11,8 @@ $path = parse_url($path, PHP_URL_PATH);
 Routing::get('','DefaultController');
 Routing::get('register','SecurityController');
 Routing::get('projects','ProjectController');
+Routing::get('dislike','ProjectController');
+Routing::get('like','ProjectController');
 
 Routing::get('discover','DiscoverController');
 Routing::post('addProject','DiscoverController');

@@ -5,6 +5,7 @@
     <link rel="stylesheet" type="text/css" href="public/css/discover.css">
     <script src="https://kit.fontawesome.com/723297a893.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="./public/js/search.js" defer><</script>
+    <script type="text/javascript" src="./public/js/statistics.js" defer></script>
     <title>DISCOVER</title>
 
 </head>
@@ -32,7 +33,7 @@
                 </div>
 
            </section>
-        <section class="projects_display">
+        <section class="projects">
             <form class="projects_form" action="project_view" method="POST">
 
             </form>

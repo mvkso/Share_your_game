@@ -4,6 +4,7 @@
     <link rel="stylesheet" type="text/css" href="public/css/style.css">
     <link rel="stylesheet" type="text/css" href="public/css/projects.css">
     <script src="https://kit.fontawesome.com/723297a893.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./public/js/statistics.js" defer></script>
     <title>PROJECTS</title>
 
 </head>
@@ -23,15 +24,15 @@
         </nav>
         <main>
             <section class="projects">
-                <form action="project_view" method="POST">
+                <form id="projects_form" action="project_view" method="POST">
                     <?php foreach ($projects as $project): ?>
                         <div id="<?=$project->getId() ?>" >
                             <img src="public/uploads/<?= $project->getImage() ?>" width="400" height="230">
                             <div>
                                 <h2><?=$project->getTitle(); ?></h2>
                                 <div class="social-section">
-                                    <i class="fas fa-heart">10</i>
-                                    <i class="fas fa-minus-square">101</i>
+                                    <i class="fas fa-heart"><?= $project->getLike();?></i>
+                                    <i class="fas fa-minus-square"><?= $project->getDislike();?></i>
                                 </div>
                                 <button name="submit_button" value="<?= $project->getId(); ?>">CHECK PROJECT</button>
                             </div>

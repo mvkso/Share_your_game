@@ -12,7 +12,6 @@ main{
 button{
     width: 250px;
     height: 40px;
-    /*background: rgb(223, 142, 38,0.5) ;*/
     background: purple;
     border: 2px solid black;
     text-decoration-color: black;
@@ -41,24 +40,16 @@ button{
     align-items: center;
     overflow-x: hidden;
     overflow-y:auto;
-
-
 }
 
 
 .projects_display>form>div>div{
-
     color: white;
     margin: 1em;
-
     display: flex;
     flex-direction: column;
     justify-content: space-around;
 
-
-}
-
-.projects_display>form{
 
 }
 
@@ -73,31 +64,26 @@ button{
         display: flex;
         flex-direction: column;
         align-items: center;
+        overflow-y: auto;
+        overflow-x: hidden;
         
         
     }
-    
-    section{
-        margin-top: -2em;
-        width: 200px;
-        display: flex;
-        flex-direction: column;
+    .projects_display{
+        width: 80vw;
+        height: 200vw;
         align-items: center;
-        padding: 1em;
+        justify-content: center;
     }
-    .search>input{
-        width: auto;
-       
-        
+    .projects_display>form{
+        width: 80vw;
+        height: 200vw;
     }
 
-    .search>div{
+    .projects_display>form>button{
         width: 50vw;
-       height: 80px;
-       align-items: center;
-       text-align: center;
+        height: 10vw;
     }
-
     
     
 

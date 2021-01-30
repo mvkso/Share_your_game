@@ -26,6 +26,8 @@ class ProjectRepository extends Repository
             $project['title'],
             $project['description'],
             $project['image'],
+            $project['like'],
+            $project['dislike'],
             $project['id']
         );
 
@@ -38,7 +40,6 @@ class ProjectRepository extends Repository
             INSERT INTO projects (title, description, created_at, id_assigned, image) 
             VALUES(?, ?, ?,?,?)
         ');
-        var_dump($_SESSION['user']);
 
         $stmt->execute([
             $project->getTitle(),
@@ -65,6 +66,8 @@ class ProjectRepository extends Repository
                 $project['title'],
                 $project['description'],
                 $project['image'],
+                $project['like'],
+                $project['dislike'],
                 $project['id']
             );
         }
@@ -100,6 +103,8 @@ class ProjectRepository extends Repository
                 $project['title'],
                 $project['description'],
                 $project['image'],
+                $project['dislike'],
+                $project['like'],
                 $project['id']
             );
         }
@@ -121,6 +126,24 @@ class ProjectRepository extends Repository
 
     }
 
+
+    public function like(int $id) {
+        $stmt = $this->database->connect()->prepare('
+            UPDATE projects SET "like" = "like" + 1 WHERE id = :id
+         ');
+
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+        $stmt->execute();
+    }
+
+    public function dislike(int $id) {
+        $stmt = $this->database->connect()->prepare('
+            UPDATE projects SET dislike = dislike + 1 WHERE id = :id
+         ');
+
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+        $stmt->execute();
+    }
 
 
 

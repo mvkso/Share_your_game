@@ -29,6 +29,15 @@ class ProjectController extends AppController
 
     }
 
+    public function like(int $id){
+        $this->projectRepository->like($id);
+        http_response_code(200);
+    }
+
+    public function dislike(int $id){
+        $this->projectRepository->dislike($id);
+        http_response_code(200);
+    }
 
 
 }

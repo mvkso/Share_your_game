@@ -12,7 +12,7 @@
         <nav>
             <header>
                
-                    <img src="public/img/logo1.png">
+                <img src="public/img/logo1.png">
                 <button class="projects"><a href="projects" style="text-decoration: none">PROJECTS</a></button>
                 <button class="projects"><a href="discover" style="text-decoration: none">DISCOVER</a></button>
                 <button class="current_projects"><a href="account" style="text-decoration: none">ACCOUNT</a></button>
@@ -38,7 +38,7 @@
                 <p style="font-family:Verdana" id="experience">Experience: <?=$user->getExperience()?></p>
                 <div id="settings" width="30" height="30">
                     <a href="edit_account">
-                        <img src="public/img/uploads/settingsIcon.png" width="30" height="30">
+                        <img id="settings_icon" src="public/img/uploads/settingsIcon.png" width="30" height="30">
                     </a>
                 </div>
            </section>

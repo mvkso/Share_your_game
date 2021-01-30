@@ -59,6 +59,7 @@ input,textarea{
     padding: 1em;
     margin: 1em;
     width: 50%;
+    outline: none;
 }
 
 @media only screen and (max-device-width: 420px) {
@@ -82,21 +83,10 @@ input,textarea{
 }
 
 .base-container{
-    
-    
-    /* background: transparent linear-gradient(180deg, #FFBE0D 0%, #850278 100%) 0% 0% no-repeat padding-box; */
-    
-    
-    
+
     height: 100vh;
     background-position: fixed;
-    
 
-    /* display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: unset;  */
- 
 
 }
 
@@ -117,7 +107,7 @@ button.projects{
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 
-    
+
 }
 button.projects:hover{
     opacity: 1.0;
@@ -194,11 +184,6 @@ body{
     background-attachment: fixed;
 }
 
-    
-/* main{
-    width: 100vw;
-    height: 10%;
-} */
 a{
     text-decoration: none;
     text-underline: none;
@@ -209,6 +194,61 @@ a{
     border-radius: 1em;
     box-shadow: 0 0 0.2em red;
     outline: none;
+}
+.projects>form{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5em;
+    padding: 8em;
+    overflow: auto;
+    overflow-x: hidden;
+    overflow-y:auto;
+}
+
+.projects>form>div>img {
+    object-fit: cover;
+    border-radius: 1em 1em 0 0;
+
+}
+
+.projects>form>div>div{
+
+    color: white;
+    margin: 1em;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+
+}
+
+.projects>form>div{
+    background:purple;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 1em 1em;
+    height: 400px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+
+}
+
+
+
+.projects>form>div>div>button{
+    margin-top: 15px;
+    background: black;
+
+}
+
+.projects>form>div:hover{
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+
+
 }
 
 
@@ -222,14 +262,15 @@ a{
   
 
     header>img{
-        margin: -10px;
-        width: 170px;
-        height: 200px;
+        visibility: hidden;
+        margin: 0px;
+        width: 0px;
+        height: 0px;
     }
 
     
     button.projects{
-        width: 150px;
+        width: 20vw;
         height: 60%;
         align-items: center;
         text-align: center;
@@ -239,7 +280,7 @@ a{
     }
 
     button.current_projects{
-        width: 150px;
+        width: 20vw;
         height: 60%;
         align-items: center;
         text-align: center;
@@ -247,13 +288,39 @@ a{
         font-size: 25px;
         text-align: center;
     }
-    header>form>input{
-        width: 0px;
-        height: 0px;
-        visibility: hidden;
-        display: none;
-        
+
+    .projects>form{
+        margin-top: 2em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+
     }
-    
-    
+
+    .projects>form>div{
+        width: 70vw;
+        height: 70vw;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .projects>form>div>img{
+        width: 70vw;
+        height: 50%;
+        margin-top: auto;
+
+
+    }
+
+    .projects>form>div>div>button{
+        width:40vw;
+        height: 10vw;
+    }
+
+
+
+
+
 }

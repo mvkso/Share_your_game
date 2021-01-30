@@ -25,17 +25,7 @@ main>.search{
     
     text-align: center;
 }
-/*.search>div{*/
-/*    margin-top: -7em;*/
-/*    width: 1100px;*/
-/*    height: 40px;*/
-/*    background: rgb(223, 142, 38,0.5) ;*/
-/*    border: 2px solid black;*/
-/*    border-radius: 1em;*/
-/*    text-align: center;*/
-/*    line-height: 2.5em;*/
 
-/*}*/
 .search>div{
     margin-top: -7em;
 }
@@ -69,95 +59,47 @@ button{
 
 
 }
-.projects_display>form{
+
+.projects{
     margin-top: -10em;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 5em;
-    padding: 8em;
-    overflow: auto;
 }
 
-.projects_display>form>div>img {
-    object-fit: cover;
-    border-radius: 1em 1em 0 0;
-}
-
-.projects_display>form>div>div{
-
-    color: white;
-    margin: 1em;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-
-
-}
-
-.projects_display>form>div{
-    /* background: transparent linear-gradient(180deg, #FFFFFF 0%, #FFD506 100%) 0% 0% no-repeat padding-box; */
-    /*background: #DF8E26;*/
-    background: purple;
-    border: 1px solid rgb(0, 0, 0);
-    border-radius: 1em 1em;
-    height: 400px;
-    width: 400px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-
-}
-
-.projects_display>form>div:hover{
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-}
-
-.projects_display>form{
-    overflow-x: hidden;
-    overflow-y:auto;
-}
-
-.projects_display>form>div>div>.submit_button{
-    margin-top: 15px;
-    background: black;
-
-}
 
 @media only screen and (max-device-width: 420px) {
     main{
         display: flex;
         flex-direction: column;
-        align-items: center;
-        
-        
-    }
-    
-    section{
+        padding: 0em;
+        width: 90vw;
+        justify-content: center;
         margin-top: -2em;
-        width: 200px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 1em;
+        margin-left: 5vw;
+        overflow-x: hidden;
+        overflow-y: auto;
     }
+
     .search>input{
-        width: auto;
-       
-        
-    }
-
-    .search>div{
         width: 50vw;
-       height: 80px;
-       align-items: center;
-       text-align: center;
+    }
+    .search>div>button{
+        width: 50vw;
+        height: 10vw;
     }
 
-    
+    .add_projects{
+        margin: -3em;
+        height: 120vw;
+    }
+
+    .add_projects>form{
+        width: 80vw;
+    }
+
+    .add_projects>form>button{
+        width:50vw;
+        height: 10vw;
+    }
+
     
 
 }

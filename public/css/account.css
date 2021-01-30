@@ -22,23 +22,14 @@ button{
 }
 
 .details{
-
-    /* overflow: auto; */
     grid-gap: 5em;
     padding: 5em;
-    /* overflow-x: hidden;
-    overflow-y: auto;  */
     overflow:auto;
-    /* position: fixed; */
-
-    
 }
 .details>div{
-    /* background: transparent linear-gradient(180deg, #FFFFFF 0%, #FFD506 100%) 0% 0% no-repeat padding-box; */
     background: rgb(146, 10, 114) ;
     border: 3px solid rgb(0, 0,0);
     border-radius: 1em 1em;
-    /* border-radius: 1em 1em 0 0; */
     height: 600px;
     width: 400px;
     font-size: 15px;
@@ -67,15 +58,11 @@ button{
     border-radius: 1em 1em;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    object-fit: contain;
 }
 .aboutme{
-    
     grid-gap: 5em;
     padding: 5em;
-
-    /* position: fixed; */
-
-    /* overflow: auto; */
 }
 
 .aboutme>div{
@@ -84,7 +71,6 @@ button{
     background: rgb(146, 10, 114) ;
     border: 2px solid rgb(0, 0,0);
     border-radius: 1em 1em;
-    /* border-radius: 1em 1em 0 0; */
     height: 300px;
     width: 700px;
     display: flex;
@@ -105,12 +91,18 @@ button{
     main{
         display: flex;
         flex-direction: column;
-        align-items: center;
-        padding: 3em;
+        padding: 0em;
+        width: 90vw;
+        justify-content: center;
+        margin-top: 5em;
+        margin-left: 5vw;
+        overflow-x: hidden;
+        overflow-y: auto;
         
     }
     button{
-        width: 40vw;
+        margin-top: 2em;
+        width: 60vw;
         height: 20vw;
     }
     
@@ -119,81 +111,43 @@ button{
         display: flex;
         flex-direction: column;
         align-items: center;
+        width: 80vw;
 
     }
     .details{
-    
-        /* overflow: auto; */
-
+        width: 80vw;
         padding: 1em;
-        /* overflow-x: hidden;
-        overflow-y: auto;  */
         overflow:auto;
-        /* position: fixed; */
-        
+
     }    
     
     .details>div{
-        /* background: transparent linear-gradient(180deg, #FFFFFF 0%, #FFD506 100%) 0% 0% no-repeat padding-box; */
-       
-        /* border-radius: 1em 1em 0 0; */
-        height: 900px;
-        width: 600px;
+        height: 1200px;
+        width: 80vw;
         font-size: 25px;
-        
-        
-        
-        
+        overflow-x: hidden;
+        overflow-y: auto;
     }
+
     .details>div>img{
         border: 2px solid black;
-       
+        width: 25vw;
+        height: 25vw;
+        object-fit: contain;
     }
     .aboutme{
-
-        margin-top: -2em;
-        /* position: fixed; */
-    
-        /* overflow: auto; */
-    }
-
-
-    
-
-    /* .projects>div{
-        border: 3px solid black;
-        height: 600px;
-        width: 500px;
-        display: flex;
-        flex-direction: column;
-        object-fit: contain;
-        font-size: 25px;
-        padding: 0;
-        grid-gap:0;
-        margin: 0em;
-        justify-content: unset;
+        justify-content: center;
         align-items: center;
-        text-align: center;
-        
-        
+        width: 80vw;
+        margin-top: -2em;
     }
-    
-    .projects>div>img{
-        width: 500px;
-        height: 350px;
-        margin-top: 0px;
+    .aboutme>div{
+        width: 80vw;
+        height: 50vw;
+        align-items: center;
+        justify-content: center;
+        overflow-x: hidden;
+        overflow-y: auto;
     }
-    .projects>div>div{
-        padding: 0px;
-        flex-direction: column;
-        text-align: left;
-        margin: -90px;
-        justify-content: unset;
-        overflow: hidden;
-
-        
-    } */
-  
-    
 
 }
